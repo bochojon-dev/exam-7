@@ -1,0 +1,20 @@
+.icon_cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 90px 0 120px;
+}
+.icon_card {
+  width: 200px;
+  cursor: pointer;
+  border-radius: 16px;
+  text-align: center;
+  padding: 12px 16px;
+  transition: 0.2s linear;
+}
+.icon_card:hover {
+  box-shadow: 4px 4px 8cap #ddd;
+}
+.icon_card h3 {
+  padding: 48px 0 12px;
+}

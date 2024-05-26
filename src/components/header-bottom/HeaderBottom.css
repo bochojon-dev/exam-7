@@ -1,0 +1,51 @@
+.bottom_contents {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: Poppins !important;
+  color: #22262a !important;
+}
+.header_bottom {
+  border: 2px solid #fafafb;
+  position: sticky;
+  padding: 26px 0;
+  transition: 0.2s ease-in;
+  top: 0;
+  background: #fff;
+  z-index: 101;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.bottom_contents ul {
+  gap: 80px;
+  transition: 0.2s linear;
+}
+.logo h4 {
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 27px;
+}
+.bottom_contents li {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 36px;
+  transition: 0.1s linear;
+}
+.nav_items:hover {
+  color: #40bfff;
+}
+.shrink {
+  padding: 16px 0;
+}
+
+@media (max-width: 900px) {
+  .bottom_contents li {
+    font-size: 16px !important;
+  }
+  .bottom_contents ul {
+    gap: 40px !important;
+  }
+}
