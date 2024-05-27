@@ -90,3 +90,9 @@
   top: 24px;
   right: 36px;
 }
+@media (max-width: 1200px) {
+  .hero_cards {
+    flex-wrap: wrap;
+    justify-content: center !important;
+  }
+}

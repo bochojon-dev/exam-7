@@ -8,7 +8,7 @@ import News from "@/components/news/News";
 import Featured from "@/components/featured/Featured";
 
 const HomePage = async () => {
-  let data = await getData("/products?limit=8&skip=6");
+  let data = await getData("/products?limit=8&skip=9");
   return (
     <>
       <Hero />

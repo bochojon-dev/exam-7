@@ -3,9 +3,16 @@ import React from "react";
 import "../products/Products.css";
 import Image from "next/image";
 import rate from "@/assets/rate.svg";
+import {
+  IoHeartOutline,
+  IoHeartSharp,
+  IoCartOutline,
+  IoCartSharp,
+} from "react-icons/io5";
+import Link from "next/link";
 
 const Products = ({ data }) => {
-  let categories = ["All", "Bags", "Sneakers", "Belt", "Snglasses"];
+  let categories = ["All", "Bags", "Sneakers", "Belt", "Sunglasses"];
   let category = categories?.map((category, i) => (
     <li key={i}> {category} </li>
   ));
@@ -19,7 +26,17 @@ const Products = ({ data }) => {
         width={405}
         height={318}
       />
-      <h3 title={e.title}> {e.title}</h3>
+      <div className="pro_icons">
+        <div className="pro_icon">
+          <IoHeartOutline />
+        </div>
+        <div className="pro_icon">
+          <IoCartOutline />
+        </div>
+      </div>
+      <Link href={`/single/${e.id}`}>
+        <h3 title={e.title}> {e.title}</h3>
+      </Link>
       <Image alt="rating" width={120} height={12} src={rate} />
       <div className="price">
         <h4>${e.price}</h4>

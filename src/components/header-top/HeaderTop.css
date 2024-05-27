@@ -5,6 +5,9 @@
   padding: 24px 0 16px;
   font-family: Nova, sans-serif !important;
 }
+.header_top {
+  background: #fff;
+}
 .top_icons {
   display: flex;
   align-items: center;

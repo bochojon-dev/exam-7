@@ -12,8 +12,14 @@
   display: flex;
   align-items: start !important;
   gap: 24px;
+  padding: 12px 16px;
+  border-radius: 16px;
+  transition: 0.2s linear;
   align-items: center;
   text-align: left !important;
+}
+.featured_card:hover {
+  box-shadow: 4px 4px 8cap #ddd;
 }
 .feature_text h3 {
   padding-bottom: 12px;
@@ -41,7 +47,7 @@
   color: #c1c8ce;
 }
 .form {
-  width: 640px;
+  max-width: 640px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -63,8 +69,8 @@
 }
 .featured_contents input {
   padding: 21px;
+  flex: 1;
   border-radius: 6px;
-  width: 100%;
   border: 2px solid #bcddfe;
 }
 .featured_contents input::placeholder {
@@ -74,4 +80,16 @@
   line-height: 21.92px;
   color: #262626;
   opacity: 0.35;
+}
+@media (max-width: 13340px) {
+  .featured_cards {
+    flex-wrap: wrap;
+    justify-content: center !important;
+    gap: 32px !important;
+  }
+}
+@media (max-width: 960px) {
+  .featured_cards {
+    padding: 30px 0 48px !important;
+  }
 }
