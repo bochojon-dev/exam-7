@@ -17,7 +17,7 @@ import { IoHeartOutline, IoCartOutline } from "react-icons/io5";
 
 const SingleRoute = ({ datum }) => {
   const [selectedValue, setSelectedValue] = React.useState("a");
-
+  // swiper va colors MUI dan olingan
   const handleChange = (event) => {
     setSelectedValue(event.target.value);
   };
@@ -53,7 +53,7 @@ const SingleRoute = ({ datum }) => {
             </div>
             <div className="desc">
               <div className="aside_title">
-                <h3> {datum.title} </h3>
+                <h3 className="product_name"> {datum.title} </h3>
                 <div className="ratings">
                   <Image alt="rating" width={80} height={12} src={rating} />
                   <p>{datum.rating.count} reviews</p>
@@ -64,11 +64,13 @@ const SingleRoute = ({ datum }) => {
               </div>
               <div className="aside_title">
                 <div className="aside_price">
-                  <h4>${datum.price}</h4>
-                  <p>
-                    <span>${datum.price * 1.5} </span>
-                    24% Off
-                  </p>
+                  <div className="costs">
+                    <h4>${datum.price}</h4>
+                    <p>
+                      <span>${datum.price * 1.5} </span>
+                      24% Off
+                    </p>
+                  </div>
                   <div className="acces">
                     <ul>
                       <li>Availability</li>
@@ -82,7 +84,7 @@ const SingleRoute = ({ datum }) => {
                   </div>
                 </div>
               </div>
-              <div className="aside_title">
+              <div className="aside_title sizes">
                 <div className="size">
                   <p>Select Color:</p>
                   <div>
@@ -127,7 +129,7 @@ const SingleRoute = ({ datum }) => {
                 </div>
                 <div className="size">
                   <p>Size</p>
-                  <select name="size">
+                  <select>
                     <option value="XS">XS</option>
                     <option value="XXL">XXL</option>
                     <option value="M">M</option>
@@ -177,28 +179,31 @@ const SingleRoute = ({ datum }) => {
               className="mySwiper"
             >
               <SwiperSlide>
-                <Image alt="product" width={400} height={350} src={hero1} />
-                <p>
-                  {datum.price} <span>{datum.price * 2}</span>
-                </p>
+                <div className="swipe">
+                  <Image alt="product" width={400} height={350} src={hero1} />
+                  <Image alt="rating" width={70} height={10} src={rating} />
+                  <p>
+                    $499 <span>$599</span>
+                  </p>
+                </div>
               </SwiperSlide>
               <SwiperSlide>
-                <Image alt="product" width={400} height={350} src={hero2} />
-                <p>
-                  {datum.price} <span>{datum.price * 2}</span>
-                </p>
+                <div className="swipe">
+                  <Image alt="product" width={400} height={350} src={hero2} />
+                  <Image alt="rating" width={70} height={10} src={rating} />
+                  <p>
+                    $499 <span>$599</span>
+                  </p>
+                </div>
               </SwiperSlide>
               <SwiperSlide>
-                <Image alt="product" width={400} height={350} src={hero3} />
-                <p>
-                  {datum.price} <span>{datum.price * 2}</span>
-                </p>
-              </SwiperSlide>
-              <SwiperSlide>
-                <Image alt="product" width={400} height={350} src={hero3} />
-                <p>
-                  {datum.price} <span>{datum.price * 2}</span>
-                </p>
+                <div className="swipe">
+                  <Image alt="product" width={400} height={350} src={hero3} />
+                  <Image alt="rating" width={70} height={10} src={rating} />
+                  <p>
+                    $499 <span>$599</span>
+                  </p>
+                </div>
               </SwiperSlide>
             </Swiper>
           </div>

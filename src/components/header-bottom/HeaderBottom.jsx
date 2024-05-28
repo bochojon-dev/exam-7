@@ -76,29 +76,29 @@ const HeaderBottom = () => {
     },
     {
       id: 2,
-      title: "SINGLE",
-      link: "/single",
+      title: "Contact",
+      link: "/contact",
     },
     {
       id: 3,
-      title: "HOME",
+      title: "SNEAKERS",
       link: "/",
     },
     {
       id: 4,
-      title: "HOME",
+      title: "BELT",
       link: "/",
     },
-    {
-      id: 5,
-      title: "HOME",
-      link: "/",
-    },
-    {
-      id: 6,
-      title: "HOME",
-      link: "/",
-    },
+    // {
+    //   id: 5,
+    //   title: "HOME",
+    //   link: "/",
+    // },
+    // {
+    //   id: 6,
+    //   title: "HOME",
+    //   link: "/",
+    // },
   ];
   const page = pages.map((el, inx) => (
     <Link href={el.link}>

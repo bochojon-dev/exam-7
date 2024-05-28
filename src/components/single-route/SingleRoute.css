@@ -8,6 +8,102 @@ aside {
 }
 .ratings {
   display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 22px 0 18px;
+}
+.product_name {
+  font-family: Poppins;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 36px;
+  color: #22262a;
+}
+.costs {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: Poppins;
+  letter-spacing: 0.5px;
+  padding: 24px 0 16px;
+}
+.costs h4 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+  color: #40bfff;
+}
+.acces {
+  padding-bottom: 22px;
+  display: flex;
+  gap: 50px;
+}
+.sizes {
+  padding: 22px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.counter {
+  background: #f6f7f8;
+  padding: 12px 20px;
+  font-family: Nova;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.49px;
+  text-align: left;
+  color: #262626;
+  gap: 24px;
+  border-radius: 6px;
+}
+.counter button {
+  background: inherit !important;
+  color: #33a0ff !important;
+  padding-bottom: 2px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.aside_carts {
+  padding: 20px 0;
+}
+.counter button:first-child {
+  padding-bottom: 4px;
+}
+.size select {
+  border-radius: 4px;
+  padding-left: 4px !important;
+}
+.acces ul {
+  flex-direction: column;
+  gap: 16px;
+}
+.sizes {
+  padding: 22px 0;
+}
+.costs p span {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #9098b1;
+  text-decoration: line-through;
+  padding-right: 12px;
+}
+.costs p {
+  color: #fb7181;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+}
+.ratings p {
+  font-family: Nova;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.49px;
+  text-align: left;
+  color: #c1c8ce;
+}
+.ratings p:nth-child(2) {
+  color: #33a0ff;
 }
 .desc {
   max-width: 550px;
@@ -15,7 +111,7 @@ aside {
 }
 .aside_title {
   width: 100%;
-  border-bottom: 1px solid #f6f7f8;
+  border-bottom: 2px solid #f6f7f8;
 }
 .size {
   display: flex;
@@ -38,6 +134,25 @@ aside {
 .mySwiper {
   display: flex !important;
   flex-direction: column;
+}
+.swipe {
+  border: 3px solid #f6f7f8;
+  padding: 12px;
+  text-align: center;
+  margin-bottom: 32px;
+}
+.swiper-pagination {
+  transform: scale(1.5) !important;
+}
+.swiper-pagination-clickable .swiper-pagination-bullet {
+  width: 24px;
+  height: 3px;
+  border-radius: 3px;
+  background: #bcddfe;
+}
+.swipe img {
+  width: 100%;
+  background-size: contain;
 }
 .aside_carts {
   display: flex;
