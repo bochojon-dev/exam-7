@@ -16,6 +16,8 @@ import Twitter from "@/assets/twitter-white.svg";
 import { IoHeartOutline, IoCartOutline } from "react-icons/io5";
 
 const SingleRoute = ({ datum }) => {
+  const [count, setCount] = useState(0);
+
   const [selectedValue, setSelectedValue] = React.useState("a");
   // swiper va colors MUI dan olingan
   const handleChange = (event) => {
@@ -160,9 +162,14 @@ const SingleRoute = ({ datum }) => {
                 <div className="aside_title">
                   <div className="aside_carts">
                     <div className="counter">
-                      <button>-</button>
-                      <h5>2</h5>
-                      <button>+</button>
+                      <button
+                        disabled={count <= 0}
+                        onClick={() => setCount(count - 1)}
+                      >
+                        -
+                      </button>
+                      <h5>{count} </h5>
+                      <button onClick={() => setCount(count + 1)}>+</button>
                     </div>
                     <div className="wish_cart">
                       <button>

@@ -81,13 +81,13 @@ const HeaderBottom = () => {
     },
     {
       id: 3,
-      title: "SNEAKERS",
-      link: "/",
+      title: "LOGIN",
+      link: "/login",
     },
     {
       id: 4,
-      title: "BELT",
-      link: "/",
+      title: "ADMIN",
+      link: "/admin",
     },
     // {
     //   id: 5,

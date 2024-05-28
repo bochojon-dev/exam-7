@@ -1,10 +1,13 @@
+import ContactPage from "@/components/contact-page/ContactPage";
+import Header2 from "@/components/header2/Header2";
 import React from "react";
 
 const Contact = () => {
   return (
-    <div>
-      <h1>contact</h1>
-    </div>
+    <>
+      <Header2 />
+      <ContactPage />
+    </>
   );
 };
 
