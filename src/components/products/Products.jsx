@@ -1,28 +1,37 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import "../products/Products.css";
 import Image from "next/image";
 import rate from "@/assets/rate.svg";
-import {
-  IoHeartOutline,
-  IoHeartSharp,
-  IoCartOutline,
-  IoCartSharp,
-} from "react-icons/io5";
+import { IoHeartOutline, IoCartOutline } from "react-icons/io5";
 import Link from "next/link";
 
 const Products = ({ data, title }) => {
-  let categories = ["All", "Bags", "Sneakers", "Belt", "Sunglasses"];
-  let category = categories?.map((category, i) => (
-    <li key={i}> {category} </li>
+  const [selectedCategory, setSelectedCategory] = useState("All");
+  const categories = ["All", "Bags", "Sneakers", "Belt", "Sunglasses"];
+
+  const categoryList = categories.map((category, inx) => (
+    <li
+      key={inx}
+      className={selectedCategory === category ? "active" : ""}
+      onClick={() => setSelectedCategory(category)}
+    >
+      {category}
+    </li>
   ));
-  const product = data?.map((e) => (
-    <div key={e.id} className="product_card">
+
+  const filteredProducts =
+    selectedCategory === "All"
+      ? data
+      : data.filter((product) => product.category === selectedCategory);
+
+  const productCards = filteredProducts.map((product) => (
+    <div key={product.id} className="product_card">
       <div className="btn">HOT</div>
       <Image
         className="image"
-        src={e.image}
-        alt={e.title}
+        src={product.image}
+        alt={product.title}
         width={405}
         height={318}
       />
@@ -34,14 +43,14 @@ const Products = ({ data, title }) => {
           <IoCartOutline />
         </div>
       </div>
-      <Link href={`/single/${e.id}`}>
-        <h3 title={e.title}> {e.title}</h3>
+      <Link href={`/single/${product.id}`}>
+        <h3 title={product.title}>{product.title}</h3>
       </Link>
       <Image alt="rating" width={120} height={12} src={rate} />
       <div className="price">
-        <h4>${e.price}</h4>
+        <h4>${product.price}</h4>
         <p>
-          <span>${e.price * e.rating.rate}</span>
+          <span>${product.price * product.rating.rate}</span>
           24% Off
         </p>
       </div>
@@ -52,9 +61,9 @@ const Products = ({ data, title }) => {
     <div className="products">
       <div className="container">
         <div className="product_contents">
-          <h2> {title} </h2>
-          <ul>{category}</ul>
-          <div className="product_cards">{product}</div>
+          <h2>{title}</h2>
+          <ul>{categoryList}</ul>
+          <div className="product_cards">{productCards}</div>
           <button>LOAD MORE</button>
         </div>
       </div>

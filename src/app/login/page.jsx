@@ -1,9 +1,12 @@
+import Header2 from "@/components/header2/Header2";
+import Register from "@/components/register/Register";
 import React from "react";
 
 const Login = () => {
   return (
     <div>
-      <h1>login</h1>
+      <Header2 />
+      <Register />
     </div>
   );
 };

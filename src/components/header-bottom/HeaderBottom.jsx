@@ -101,10 +101,8 @@ const HeaderBottom = () => {
     // },
   ];
   const page = pages.map((el, inx) => (
-    <Link href={el.link}>
-      <li className="nav_items" key={inx}>
-        {el.title}
-      </li>
+    <Link key={inx} href={el.link}>
+      <li className="nav_items">{el.title}</li>
     </Link>
   ));
 
