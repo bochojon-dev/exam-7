@@ -201,9 +201,33 @@ const SingleRoute = ({ datum }) => {
                 </h3>
                 <h3>Another tab</h3>
               </div>
+              <div className="info_texts">
+                <p>
+                  air max are always very comfortable fit, clean and just
+                  perfect in every way. just the box was too small and scrunched
+                  the sneakers up a little bit, not sure if the box was always
+                  this small but the 90s are and will always be one of my
+                  favorites.
+                </p>
+                <p>
+                  air max are always very comfortable fit, clean and just
+                  perfect in every way. just the box was too small and scrunched
+                  the sneakers up a little bit, not sure if the box was always
+                  this small but the 90s are and will always be one of my
+                  favorites.
+                </p>
+                <p>
+                  air max are always very comfortable fit, clean and just
+                  perfect in every way. just the box was too small and scrunched
+                  the sneakers up a little bit, not sure if the box was always
+                  this small but the 90s are and will always be one of my
+                  favorites.
+                </p>
+              </div>
             </div>
           </aside>
           <div className="bside">
+            <h2>BEST SELLER</h2>
             <Swiper
               pagination={{
                 clickable: true,
