@@ -2,9 +2,48 @@
   display: grid;
   grid-template-columns: 1fr 300px;
 }
-aside {
+@media (max-width: 1150px) {
+  .single_contents {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .bside {
+    width: 400px;
+    padding-top: 32px;
+  }
+  .product_contents ul {
+    padding-top: 60px !important;
+  }
+}
+.img {
+  width: 100%;
+  background-size: contain;
+  padding-bottom: 110px;
+}
+.others {
+  display: flex;
+  gap: 16px;
+}
+.others img {
+  padding: 8px;
+  border: 2px solid #006cff;
+}
+.others img:active,
+.others img:hover {
+  transform: scale(1.08);
+  cursor: pointer;
+}
+.aside {
   display: flex;
   gap: 32px;
+}
+.info_title {
+  display: flex;
+  border-bottom: 1px solid black;
+}
+.information {
+  width: 100%;
 }
 .ratings {
   display: flex;
@@ -56,9 +95,21 @@ aside {
   gap: 24px;
   border-radius: 6px;
 }
-.counter button {
-  background: inherit !important;
+.wish_cart {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.wish_cart button {
+  background: #ebf6ff !important;
+  opacity: 1 !important;
+  padding: 16px 20px;
   color: #33a0ff !important;
+  border-radius: 6px;
+}
+.counter button {
+  color: #33a0ff !important;
+  background: inherit !important;
   padding-bottom: 2px;
   font-size: 20px;
   font-weight: 500;
@@ -80,6 +131,11 @@ aside {
 .sizes {
   padding: 22px 0;
 }
+.wish_cart button {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
 .costs p span {
   font-size: 14px;
   font-weight: 400;
@@ -93,6 +149,33 @@ aside {
   font-size: 14px;
   font-weight: 700;
   line-height: 21px;
+}
+.share button {
+  padding: 12px 32px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+  color: #fff !important;
+  border-radius: 6px;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  background: #03a9f4;
+  transition: 0.2s linear;
+}
+.wish_cart-img {
+  width: 18px;
+  height: 18px;
+}
+.share button:hover {
+  background: #385c8e !important;
+}
+
+.share button:nth-child(2) img {
+  width: 18px;
 }
 .ratings p {
   font-family: Nova;
@@ -137,9 +220,33 @@ aside {
 }
 .swipe {
   border: 3px solid #f6f7f8;
-  padding: 12px;
+  padding-bottom: 36px;
+  border-radius: 6px;
   text-align: center;
   margin-bottom: 32px;
+}
+.swipe img:first-child {
+  padding-bottom: 48px;
+}
+.swipe p {
+  padding-top: 12px;
+  font-family: Nova;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.49px;
+  color: #ff4858;
+}
+.share {
+  display: grid !important;
+  gap: 12px;
+  padding: 20px 0 48px;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+}
+.swipe p span {
+  padding-left: 12px;
+  color: #c1c8ce;
+  text-decoration: line-through;
 }
 .swiper-pagination {
   transform: scale(1.5) !important;

@@ -1,6 +1,6 @@
 .product_contents {
   font-family: Poppins;
-  padding-top: 260px;
+  padding-top: 60px;
   text-align: center;
 }
 .product_contents h2 {
@@ -33,7 +33,28 @@
   line-height: 30px;
   padding: 32px 0 40px;
 }
+.btn {
+  font-family: Nova;
+  font-size: 18px;
+  font-weight: 400 !important;
+  line-height: 21.92px;
+  text-align: left;
+  padding: 6px 12px;
+  color: #fff;
+  background: #ff4858;
+  border-radius: 4px;
+  width: 64px;
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+.product_card:first-child .btn {
+  display: block !important;
+}
 .product_cards {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;

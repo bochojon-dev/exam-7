@@ -15,6 +15,7 @@
 }
 .footer_bottom {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   padding-top: 30px;
@@ -30,6 +31,7 @@
   background: #bcddfe;
 }
 .footer_contents {
+  flex-wrap: wrap;
   font-family: Poppins;
   padding: 140px 0 50px;
 }

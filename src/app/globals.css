@@ -21,6 +21,13 @@ button {
   background: #40bfff;
   color: #fff;
   cursor: pointer;
+  transition: 0.1s linear;
+}
+button:hover {
+  opacity: 0.85;
+}
+button:active {
+  transform: scale(0.95);
 }
 select {
   border: 0;

@@ -76,7 +76,7 @@ const HeaderBottom = () => {
     },
     {
       id: 2,
-      title: "Contact",
+      title: "CONTACT",
       link: "/contact",
     },
     {

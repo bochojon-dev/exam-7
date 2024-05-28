@@ -18,6 +18,7 @@ const Products = ({ data, title }) => {
   ));
   const product = data?.map((e) => (
     <div key={e.id} className="product_card">
+      <div className="btn">HOT</div>
       <Image
         className="image"
         src={e.image}
@@ -51,7 +52,6 @@ const Products = ({ data, title }) => {
     <div className="products">
       <div className="container">
         <div className="product_contents">
-          {/* <h2>BEST SELLER</h2> */}
           <h2> {title} </h2>
           <ul>{category}</ul>
           <div className="product_cards">{product}</div>
