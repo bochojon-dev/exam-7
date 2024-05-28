@@ -11,6 +11,8 @@ import { Pagination, Autoplay } from "swiper/modules";
 import hero3 from "@/assets/hero3.png";
 import hero2 from "@/assets/hero2.png";
 import hero1 from "@/assets/hero1.png";
+import Facebook from "@/assets/facebook.svg";
+import Twitter from "@/assets/twitter.svg";
 import { IoHeartOutline, IoCartOutline } from "react-icons/io5";
 
 const SingleRoute = ({ datum }) => {
@@ -34,7 +36,6 @@ const SingleRoute = ({ datum }) => {
         <div className="single_contents">
           <aside>
             <div className="images">
-              {/* <Image alt="product" width={375} height={270} src={} /> */}
               <div className="img">
                 <Image
                   alt="product"
@@ -140,7 +141,26 @@ const SingleRoute = ({ datum }) => {
                     <h5>2</h5>
                     <button>+</button>
                   </div>
+                  <div className="wish_cart">
+                    <button>
+                      <IoCartOutline />
+                      Add To Card
+                    </button>
+                    <button>
+                      <IoHeartOutline />
+                    </button>
+                  </div>
                 </div>
+              </div>
+              <div className="share">
+                <button>
+                  <Image alt="facebook" width={8} height={16} src={Facebook} />
+                  Share on Facebook
+                </button>
+                <button>
+                  <Image alt="facebook" width={12} height={16} src={Twitter} />
+                  Share on Twitter
+                </button>
               </div>
             </div>
           </aside>

@@ -11,12 +11,11 @@ import {
 } from "react-icons/io5";
 import Link from "next/link";
 
-const Products = ({ data }) => {
+const Products = ({ data, title }) => {
   let categories = ["All", "Bags", "Sneakers", "Belt", "Sunglasses"];
   let category = categories?.map((category, i) => (
     <li key={i}> {category} </li>
   ));
-  console.log("data >>> ", data);
   const product = data?.map((e) => (
     <div key={e.id} className="product_card">
       <Image
@@ -52,7 +51,8 @@ const Products = ({ data }) => {
     <div className="products">
       <div className="container">
         <div className="product_contents">
-          <h2>BEST SELLER</h2>
+          {/* <h2>BEST SELLER</h2> */}
+          <h2> {title} </h2>
           <ul>{category}</ul>
           <div className="product_cards">{product}</div>
           <button>LOAD MORE</button>

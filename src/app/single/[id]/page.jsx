@@ -11,7 +11,7 @@ const Single = async ({ params: { id } }) => {
     <>
       <Header1 />
       <SingleRoute datum={datum} />
-      <Products data={data} />
+      <Products data={data} title={"RELATED PRODUCTS"} />
     </>
   );
 };

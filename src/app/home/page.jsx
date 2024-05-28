@@ -12,7 +12,7 @@ const HomePage = async () => {
   return (
     <>
       <Hero />
-      <Products data={data} />
+      <Products data={data} title={"BEST SELLER"} />
       <Adidas />
       <Icons />
       <News />
