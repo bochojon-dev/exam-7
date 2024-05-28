@@ -83,6 +83,13 @@ textarea {
   margin: 120px 0 100px;
   box-shadow: 0px 2px 4px 0px #00000040;
 }
+@media (max-width: 1170px) {
+  .contact_contents {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    padding: 32px;
+  }
+}
 
 .form {
   max-width: 640px;
